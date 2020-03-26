@@ -1,0 +1,6 @@
+%code {
+    @include background-color(light-gray);
+    @include font-weight(bold);
+    @include padding(0 0.5x);
+    font-family: $font-family--monospace;
+}

@@ -1,0 +1,7 @@
+.Page {
+    @extend %Page !optional;
+
+    &-content {
+        @extend %Page-content !optional;
+    }
+}

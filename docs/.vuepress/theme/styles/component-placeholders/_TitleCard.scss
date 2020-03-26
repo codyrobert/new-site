@@ -1,0 +1,12 @@
+%TitleCard {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+%TitleCard-subtitle {
+    @include color(gray);
+    @include font(large);
+    max-width: 680px;
+}

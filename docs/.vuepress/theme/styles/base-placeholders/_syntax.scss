@@ -1,0 +1,72 @@
+/**
+ * GHColors theme by Avi Aryan (http://aviaryan.in)
+ * Inspired by Github syntax coloring
+ */
+
+%syntax {
+	@include color($syntax-default);
+}
+
+%syntax-comment,
+%syntax-prolog,
+%syntax-doctype,
+%syntax-cdata {
+	@include color($syntax-comment);
+	font-style: italic;
+}
+
+%syntax-namespace {
+	opacity: .7;
+}
+
+%syntax-string,
+%syntax-attrvalue {
+	@include color($syntax-string);
+}
+
+%syntax-punctuation,
+%syntax-operator {
+	@include color($syntax-punctuation);
+}
+
+%syntax-entity,
+%syntax-url,
+%syntax-symbol,
+%syntax-number,
+%syntax-boolean,
+%syntax-variable,
+%syntax-constant,
+%syntax-property,
+%syntax-regex,
+%syntax-inserted {
+	@include color($syntax-variable);
+}
+
+%syntax-atrule,
+%syntax-keyword,
+%syntax-attrname,
+.language-autohotkey %syntax-selector {
+	@include color($syntax-attribute);
+}
+
+%syntax-function,
+%syntax-deleted,
+.language-autohotkey %syntax-tag {
+	@include color($syntax-function);
+}
+
+%syntax-tag,
+%syntax-selector,
+.language-autohotkey %syntax-keyword {
+	@include color($syntax-selector);
+}
+
+%syntax-important,
+%syntax-function,
+%syntax-bold {
+	font-weight: bold;
+}
+
+%syntax-italic {
+	font-style: italic;
+}

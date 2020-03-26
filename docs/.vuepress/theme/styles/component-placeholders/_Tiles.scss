@@ -1,0 +1,8 @@
+%Tiles {
+    @include drop-shadow(black, low);
+    @include margin(0 0 10x);
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}

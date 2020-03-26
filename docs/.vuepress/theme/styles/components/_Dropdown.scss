@@ -1,0 +1,23 @@
+.Dropdown {
+    @extend %Dropdown !optional;
+
+    ul {
+        @extend %Dropdown-ul !optional;
+    }
+
+    li {
+        @extend %Dropdown-li !optional;
+    }
+
+    a {
+        @extend %Dropdown-a !optional;
+    }
+
+    .router-link-active {
+        @extend %Dropdown-active !optional;
+    }
+
+    span {
+        @extend %Dropdown-label !optional;
+    }
+}

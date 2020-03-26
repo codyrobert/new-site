@@ -1,0 +1,51 @@
+%Sidebar {
+    @include padding(0 3x);
+    @include responsive-property('min-height', $header-height, 'calc(100vh - %s - #{_(10x)})');
+    @include responsive-property('top', $header-height, 'calc(%s + #{_(5x)})');
+    @include responsive-property('width', $sidebar-width);
+    border-right: 1px solid get-color(light-gray);
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+%Sidebar-heading {
+    @extend %h6;
+}
+
+%Sidebar-links {
+    @include font(small);
+}
+
+%Sidebar-ul {
+    @include margin(1x 0 0);
+    list-style: none;
+    padding: 0;
+}
+
+%Sidebar-sub {
+    margin-left: _(2x);
+
+    %Sidebar-active {
+        @include font-weight(base);
+    }
+}
+
+%Sidebar-li {
+    @include margin(0 0 1x);
+}
+
+%Sidebar-a {
+    @include color(default);
+    text-decoration: none;
+}
+
+%Sidebar-hover {
+    @include color(accent);
+}
+
+%Sidebar-active {
+    @include color(accent);
+    @include font-weight(bold);
+}

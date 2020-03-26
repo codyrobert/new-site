@@ -1,0 +1,22 @@
+%Heading {
+    @include margin(5x 0 3x);
+    font-family: $font-family--secondary;
+    position: relative;
+
+    .header-anchor {
+        @include transition(color normal, opacity normal);
+        font-size: 0.8em;
+        opacity: 0;
+        padding-right: _(1x);
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @include hover {
+        .header-anchor {
+            opacity: 1;
+        }
+    }
+}

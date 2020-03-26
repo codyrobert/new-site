@@ -1,0 +1,35 @@
+.Sidebar {
+    @extend %Sidebar !optional;
+
+    &-heading {
+        @extend %Sidebar-heading !optional;
+    }
+
+    &-links {
+        @extend %Sidebar-links !optional;
+
+        ul {
+            @extend %Sidebar-ul !optional;
+        }
+
+        li {
+            @extend %Sidebar-li !optional;
+        }
+
+        a {
+            @extend %Sidebar-a !optional;
+
+            @include hover {
+                @extend %Sidebar-hover !optional;
+            }
+        }
+
+        .is-active {
+            @extend %Sidebar-active !optional;
+        }
+    }
+
+    &-links &-sub {
+        @extend %Sidebar-sub !optional;
+    }
+}

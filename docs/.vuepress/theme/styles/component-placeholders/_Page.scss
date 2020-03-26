@@ -1,0 +1,12 @@
+%Page {
+    @include background-color(darkest-gray);
+    min-height: 300vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+%Page-content {
+    position: relative;
+    z-index: 10;
+}

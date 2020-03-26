@@ -1,0 +1,7 @@
+.TitleCard {
+    @extend %TitleCard !optional;
+
+    &-subtitle {
+        @extend %TitleCard-subtitle !optional;
+    }
+}

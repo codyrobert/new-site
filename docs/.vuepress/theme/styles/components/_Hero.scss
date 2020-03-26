@@ -1,0 +1,15 @@
+.Hero {
+    @extend %Hero !optional;
+
+    &-background {
+        @extend %Hero-background !optional;
+    }
+
+    &-content {
+        @extend %Hero-content !optional;
+    }
+
+    &-image {
+        @extend %Hero-image !optional;
+    }
+}

@@ -1,0 +1,68 @@
+%Nav {
+    align-self: stretch;
+    align-items: stretch;
+    display: flex;
+}
+
+%Nav-ul {
+    align-items: stretch;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+%Nav-li {
+    @include color(white);
+    @include font(x-small);
+    align-items: stretch;
+    display: flex;
+    position: relative;
+}
+
+%Nav-a {
+    @include color(white);
+    @include padding(0 1.5x);
+    @include transition(color normal);
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    &:before {
+        @include background-color(accent);
+        @include transition(opacity normal, transform normal);
+        content: '';
+        display: block;
+        height: 2px;
+        left: _(1.5x);
+        opacity: 0;
+        position: absolute;
+        right: _(1.5x);
+        transform: scaleX(0);
+        top: calc(50% + 0.5em + 4px);
+    }
+
+    .fa,
+    .fab,
+    .fad,
+    .fal,
+    .far,
+    .fas {
+        @include font-size(x-small);
+        margin-left: _(1x);
+    }
+}
+
+%Nav-active,
+%Nav-hover {
+    text-decoration: none;
+
+    &:not(.has-children):before {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+%Nav-inactive {
+    @include color(dark-gray);
+}

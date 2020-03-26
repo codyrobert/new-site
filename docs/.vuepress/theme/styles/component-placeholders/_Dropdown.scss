@@ -1,0 +1,78 @@
+%Dropdown {
+    @include linear-gradient(135deg, mix(get-color(darker-gray), get-color(darkest-gray), 50%) 0%, darker-gray 100%);
+    @include background-color(darker-gray);
+    @include color(gray);
+    @include drop-shadow(black, low);
+	@include font(x-small);
+	@include padding(1x 0 2x);
+    @include transition(left 0s, opacity normal, transform normal);
+	border-radius: 0 0 4px 4px;
+    left: 50%;
+    opacity: 0;
+	position: absolute;
+    top: 100%;
+	transform: translateX(-50%) perspective(0) rotateX(-1deg);
+	transform-origin: center top;
+    width: 240px;
+	z-index: 10;
+
+    &:before {
+        @include triangle(top, mix(get-color(darker-gray), get-color(darkest-gray), 55%));
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    > ul > li {
+        @include margin(2x 0 0);
+        @include padding(2x 3x 0);
+    }
+
+    > ul > li:not(:first-child) {
+        border-top: 1px solid get-color(darker-gray);
+    }
+}
+
+:not(:hover) > %Dropdown {
+	left: 100vw;
+	transition-delay: get-transition-speed(normal), 0s, 0s;
+}
+
+:hover > %Dropdown {
+	opacity: 1;
+	transform: translateX(-50%) perspective(0);
+}
+
+%Dropdown-ul {
+    @include margin(1x 0 0);
+    list-style: none;
+    padding: 0;
+}
+
+%Dropdown-li {
+    @include margin(1x 0 0);
+    position: relative;
+}
+
+%Dropdown-a {
+    @include color(white);
+    @include font-weight(base);
+
+    @include hover {
+        @include color(white);
+    }
+}
+
+%Dropdown-active {
+    &:before {
+        @include triangle(right, currentColor, 1x);
+        left: _(-0.5x);
+        position: absolute;
+        top: 50%;
+        transform: translate(-100%, -50%);
+    }
+}
+
+%Dropdown-label {
+}

@@ -1,0 +1,46 @@
+%TrailingLink {
+    @include color(gray, 0.3);
+    align-items: center;
+    display: inline-flex;
+
+    p {
+        align-items: center;
+        display: flex;
+        font-size: 24px;
+    }
+
+    a {
+        @include color(blue);
+        @include font(small);
+        text-decoration: none;
+
+        @include hover {
+            @include color(black);
+
+            &:after {
+                transform: translateX(#{_(1x)}) rotate(45deg);
+            }
+        }
+
+        &:not(:first-child) {
+            margin-left: _(4x);
+        }
+
+        &:not(:last-child) {
+            margin-right: _(4x);
+        }
+
+        &:after {
+            @include transition(transform normal);
+            border: solid currentcolor;
+            border-width: 2px 2px 0 0;
+            content: '';
+            display: inline-block;
+            height: 6px;
+            margin-left: _(1x);
+            transform: rotate(45deg);
+            transform-origin: center top;
+            width: 6px;
+        }
+    }
+}

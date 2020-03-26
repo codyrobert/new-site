@@ -1,0 +1,58 @@
+%Hero {
+    @include background-color(white);
+    @include padding(18x 0 10x);
+    min-height: 80vw;
+    position: relative;
+
+    @include media('>1000px') {
+        min-height: 800px;
+    }
+
+    %Wrap {
+        align-items: center;
+        display: flex;
+    }
+}
+
+%Hero-background  {
+    display: block;
+    height: 100.2vw;
+    left: 50%;
+    max-height: 1425px;
+    max-width: 2560px;
+    position: absolute;
+    top: -34.1vw;
+    transform: translateX(-50%);
+    width: 180vw;
+    z-index: 5;
+
+    svg {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    path {
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: hero-drawing;
+        animation-timing-function: get-timing-function(ease-in-cubic);
+    }
+}
+
+%Hero-content {
+    width: get-grid-percentage(7, 12);
+}
+
+%Hero-image {
+    margin-left: auto;
+    width: get-grid-percentage(4, 12);
+
+    img {
+        display: block;
+        max-height: 480px;
+        max-width: none;
+        object-fit: contain;
+    }
+}

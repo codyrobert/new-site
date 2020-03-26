@@ -1,0 +1,4 @@
+[class*=' language-'],
+[class^='language-'] {
+    @include margin(0 0 3x);
+}

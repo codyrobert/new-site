@@ -1,0 +1,27 @@
+{
+  "name": "codyrobert-site",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@flickerbox/fabric": "^20.0.15",
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/free-brands-svg-icons": "^5.2.0",
+    "@fortawesome/vue-fontawesome": "^0.1.1",
+    "easing-functions": "^1.0.1",
+    "import-glob-loader": "1.1.0",
+    "lodash": "^4.17.11",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue-svg-loader": "^0.15.0",
+    "vuepress": "^1.3.1",
+    "vuepress-plugin-container": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "",
+  "license": "ISC"
+}
