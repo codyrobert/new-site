@@ -10,7 +10,7 @@ module.exports = {
         ['script', { crossorigin: 'anonymous', src: 'https://kit.fontawesome.com/0f924bd517.js' }],
     ],
 
-    dest: 'public',
+    dest: 'docs',
 
     evergreen: true,
 
