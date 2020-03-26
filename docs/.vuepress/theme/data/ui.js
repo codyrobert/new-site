@@ -25,14 +25,18 @@ function onScroll() {
     UI.scrollTop = window.scrollY
 }
 
-window.addEventListener('orientationchange', onResize)
-window.addEventListener('resize', onResize)
+if ( 'undefined' !== typeof window ) {
+    
+    window.addEventListener('orientationchange', onResize)
+    window.addEventListener('resize', onResize)
 
-window.addEventListener('orientationchange', onScroll)
-window.addEventListener('scroll', onScroll)
+    window.addEventListener('orientationchange', onScroll)
+    window.addEventListener('scroll', onScroll)
 
-onResize()
-onScroll()
+    onResize()
+    onScroll()
+
+}
 
 /*
  * Export

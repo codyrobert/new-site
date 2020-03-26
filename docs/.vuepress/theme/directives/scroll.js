@@ -14,9 +14,13 @@ const instances = []
  * Attach listeners
  */
 
-window.addEventListener('scroll', onScroll)
-window.addEventListener('resize', onScroll)
-window.addEventListener('orientationchange', onScroll)
+if ( 'undefined' !== typeof window ) {
+	
+	window.addEventListener('scroll', onScroll)
+	window.addEventListener('resize', onScroll)
+	window.addEventListener('orientationchange', onScroll)
+
+}
 
 /*
  * Scroll class
