@@ -8,7 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.2.0",
     "@fortawesome/vue-fontawesome": "^0.1.1",
     "easing-functions": "^1.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "node-sass-glob-importer": "^5.3.2",
     "normalize-scss": "^7.0.1",
     "sass": "^1.25.0",
