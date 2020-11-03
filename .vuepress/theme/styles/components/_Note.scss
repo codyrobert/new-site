@@ -1,7 +1,0 @@
-.Note {
-    @extend %Note !optional;
-
-    &-title {
-        @extend %Note-title !optional;
-    }
-}

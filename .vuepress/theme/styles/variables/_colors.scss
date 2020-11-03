@@ -4,24 +4,20 @@
 //
 //----------------------------------------------------------------------
 
-$colors: (
+$color-default:         #0F1B2A;
+$color-accent:          #CE6A85;
 
-	'default':         #0F1B2A,
-	'accent':          #CE6A85,
+$color-black:           #000000;
+$color-white:           #FFFFFF;
 
-	'black':           #000000,
-	'white':           #FFFFFF,
+$color-maroon:          #5C374C;
+$color-mauve:           #985277;
+$color-rose:            #CE6A85;
 
-	'maroon':          #5C374C,
-	'mauve':           #985277,
-	'rose':            #CE6A85,
-
-	'darkest-gray':    #0F1B2A,
-	'darker-gray':     #2E3D4F,
-	'dark-gray':       #54606F,
-	'gray':            #8F97A0,
-	'light-gray':      #CACED1,
-	'lighter-gray':    #E5E6E7,
-	'lightest-gray':   #F1F2F2,
-
-);
+$color-darkest-gray:    #0F1B2A;
+$color-darker-gray:     #2E3D4F;
+$color-dark-gray:       #54606F;
+$color-gray:            #8F97A0;
+$color-light-gray:      #CACED1;
+$color-lighter-gray:    #E5E6E7;
+$color-lightest-gray:   #F1F2F2;

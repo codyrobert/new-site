@@ -1,5 +1,5 @@
 <template>
-    <div class="Page">
+    <div class="Page" :class="{ 'is-inverted': isInverted }">
 
         <Header/>
         <TitleCard/>
@@ -9,12 +9,13 @@
 </template>
 
 <style lang="scss">
-@import '../styles/master';
+@import '../styles/main';
 </style>
 
 <script>
 import Vue from 'vue'
 import { setGlobalInfo } from '@app/util'
+import LogoData from '@theme/data/logo'
 import Header from '@theme/components/Header'
 import TitleCard from '@theme/components/TitleCard'
 
@@ -35,6 +36,10 @@ export default {
             setGlobalInfo('layout', layout)
             return Vue.component(layout)
 
+        },
+
+        isInverted() {
+            return ( 0 === LogoData.percent )
         },
 
     },

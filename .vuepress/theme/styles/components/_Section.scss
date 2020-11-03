@@ -1,7 +1,0 @@
-.Section {
-    @extend %Section !optional;
-
-    &-content {
-        @extend %Section-content !optional;
-    }
-}

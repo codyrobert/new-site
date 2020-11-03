@@ -24,6 +24,9 @@ const Logo = new Vue({
         },
 
         percent() {
+            if ( null === this.top ) {
+                return 1
+            }
             const percent = ( ( this.top / UI.windowHeight ) - this.endPercent ) / ( this.startPercent - this.endPercent )
             return Cubic.Out(_.max([_.min([percent, 1]), 0]))
         },

@@ -6,8 +6,7 @@ module.exports = {
 
     head: [
         ['script', {}, 'document.documentElement.classList.add(\'js\');'],
-        ['link', { rel: 'stylesheet', href: 'https://use.typekit.net/dpb2grg.css' }],
-        ['script', { crossorigin: 'anonymous', src: 'https://kit.fontawesome.com/0f924bd517.js' }],
+        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap' }],
     ],
 
     base: '/new-portfolio/',
@@ -18,29 +17,22 @@ module.exports = {
 
     configureWebpack: {
         module: {
-            rules: [
-                {
-                    test: /\.scss$/,
-                    use: [
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                implementation: require('sass'),
-                                sassOptions: {
-                                    precision: 10,
-                                },
-                            },
+            rules: [{
+                test: /\.scss$/,
+                use: [{
+                    loader: 'sass-loader',
+                    options: {
+                        implementation: require('sass'),
+                        sassOptions: {
+                            importer: require('node-sass-glob-importer')(),
+                            precision: 10,
                         },
-                        {
-                            loader: 'import-glob-loader',
-                        },
-                    ],
-                },
-            ],
+                    },
+                }],
+            }],
         },
         resolve: {
             alias: {
-                'fabric': require('@flickerbox/fabric/webpack.manifest').sassDir,
                 '@public': path.resolve('docs/.vuepress/public'),
             },
         },

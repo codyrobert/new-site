@@ -1,7 +1,19 @@
 .TitleCard {
-    @extend %TitleCard !optional;
-
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    
     &-subtitle {
-        @extend %TitleCard-subtitle !optional;
+        color: $color-gray;
+        font-size: $font-size-large;
+        font-weight: $font-weight-large;
+        line-height: $line-height-large;
+        max-width: 680px;
+        transition: 0.4s color;
     }
+}
+
+.is-inverted .TitleCard-subtitle {
+    color: $color-darkest-gray;
 }

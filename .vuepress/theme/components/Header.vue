@@ -13,8 +13,8 @@
 
 <script>
 import LogoData from '@theme/data/logo'
+import UIData from '@theme/data/ui'
 import Logo from '@theme/components/Logo'
-import Nav from '@theme/components/Nav'
 
 export default {
 
@@ -22,13 +22,15 @@ export default {
 
     components: {
         Logo,
-        Nav,
     },
 
     computed: {
 
         isHidden() {
-            return ( 0 !== LogoData.percent )
+            return (
+                ( 0 !== LogoData.percent ) ||
+                (120 + UIData.scrollTop > UIData.windowHeight)
+            )
         },
 
     },

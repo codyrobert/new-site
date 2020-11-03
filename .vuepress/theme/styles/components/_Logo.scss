@@ -1,3 +1,24 @@
 .Logo {
-    @extend %Logo !optional;
+	display: block;
+    flex-shrink: 0;
+    height: 40px;
+    margin: 0 0 48px;
+	position: relative;
+    transform-origin: left top;
+    transition: 0.4s opacity;
+    width: 176px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.is-hidden {
+        opacity: 0;
+    }
+
+	svg {
+		display: block;
+		max-height: 100%;
+		max-width: 100%;
+	}
 }

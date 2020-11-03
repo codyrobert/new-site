@@ -3,7 +3,7 @@
         <div class="Wrap">
 
             <Logo ref="logo" :class="{ 'is-hidden': logoIsHidden }" :style="logoStyle"/>
-            <p ref="subtitle" class="TitleCard-subtitle" :style="subtitleStyle">I'm a web developer with a streamlined approach to development and an imaginative eye for design.</p>
+            <p ref="subtitle" class="TitleCard-subtitle" :style="subtitleStyle">I'm a full stack engineer with a streamlined and thoughtful approach to development.</p>
 
         </div>
     </div>

@@ -1,39 +1,17 @@
 .Header {
-    @extend %Header !optional;
+    align-items: center;
+    display: flex;
+    height: 120px;
+    left: 0;
+    opacity: 1;
+    padding: 40px 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.4s opacity;
+    z-index: 20;
 
-    &-nav {
-        @extend %Header-nav !optional;
-        @extend %Nav !optional;
-
-        > ul {
-            @extend %Nav-ul !optional;
-        }
-
-        > ul > li {
-            @extend %Nav-li !optional;
-        }
-
-        > ul > li > a,
-        > ul > li > span {
-            @extend %Nav-a !optional;
-        }
-
-        > ul > li:hover > a,
-        > ul > li:hover > span,
-        > ul > li > a:active,
-        > ul > li > a:focus,
-        > ul > li > a:hover,
-        > ul > li > span:hover {
-            @extend %Nav-hover !optional;
-        }
-
-        > ul:hover > li:not(:hover) > a,
-        > ul:hover > li:not(:hover) > span {
-            @extend %Nav-inactive !optional;
-        }
-
-        > ul:not(:hover) > li > .router-link-active {
-            @extend %Nav-active !optional;
-        }
+    &.is-hidden {
+        opacity: 0;
     }
 }

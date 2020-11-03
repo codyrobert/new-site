@@ -1,4 +1,47 @@
-[class*=' language-'],
-[class^='language-'] {
-    @include margin(0 0 3x);
+body {
+    color: $color-darkest-gray;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-h1;
+    line-height: $line-height-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-h2;
+    line-height: $line-height-h2;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    font-weight: $font-weight-h3;
+    line-height: $line-height-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    font-weight: $font-weight-h4;
+    line-height: $line-height-h4;
+}
+
+h5 {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-h5;
+    line-height: $line-height-h5;
+}
+
+h6 {
+    font-size: $font-size-h6;
+    font-weight: $font-weight-h6;
+    line-height: $line-height-h6;
+}
+
+.header-anchor {
+    display: none;
 }

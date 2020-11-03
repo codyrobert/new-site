@@ -1,9 +1,9 @@
 <template>
-    <router-link class="Logo" to="/">
+    <div class="Logo">
 
         <LogoSvg/>
 
-    </router-link>
+    </div>
 </template>
 
 <script>

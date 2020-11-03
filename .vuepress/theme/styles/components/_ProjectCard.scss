@@ -1,0 +1,76 @@
+.ProjectCard {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 192px;
+    position: relative;
+    width: 100%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &-content {
+        padding-bottom: 192px;
+        padding-top: 64px;
+        width: calc(50% + 32px);
+    }
+
+    &.is-left &-content {
+        padding-right: 64px;
+    }
+
+    &.is-right &-content {
+        padding-left: 64px;
+    }
+
+    &-primaryImage,
+    &-secondaryImage {
+        background: $color-white;
+        box-shadow: 0 8px 32px rgba($color-darkest-gray, 0.1);
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+        }
+
+        img {
+            bottom: 0;
+            display: block;
+            left: 0;
+            object-fit: cover;
+            object-position: center top;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &-primaryImage {
+        top: 0;
+        width: calc(50% - 32px);
+
+        &:before {
+            padding-bottom: 100% * 3/2;
+        }
+    }
+
+    &.is-right &-primaryImage {
+        order: -1;
+    }
+
+    &-secondaryImage {
+        left: 10%;
+        margin-top: -96px;
+        width: 75%;
+
+        &:before {
+            padding-bottom: 100% * 3/5;
+        }
+    }
+
+    &.is-right &-secondaryImage {
+        left: 15%;
+    }
+}
