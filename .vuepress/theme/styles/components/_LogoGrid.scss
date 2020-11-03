@@ -4,6 +4,17 @@
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 192px;
 
+    @media (max-width: 960px) {
+        grid-gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 96px;
+    }
+
+    @media (max-width: 480px) {
+        grid-gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     &:last-child {
         margin-bottom: 0;
     }

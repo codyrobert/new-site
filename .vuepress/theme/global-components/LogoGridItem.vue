@@ -1,7 +1,7 @@
 <template>
-    <div class="LogoGrid-item">
-        <img :src="src">
-    </div>
+    <a class="LogoGrid-item" :href="to" target="_blank">
+        <img :src="logo">
+    </a>
 </template>
 
 <script>
@@ -10,7 +10,11 @@ export default {
     name: 'LogoGridItem',
 
     props: {
-        src: {
+        logo: {
+            type: String,
+            default: null,
+        },
+        to: {
             type: String,
             default: null,
         },

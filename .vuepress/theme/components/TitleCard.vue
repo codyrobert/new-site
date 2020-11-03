@@ -3,7 +3,7 @@
         <div class="Wrap">
 
             <Logo ref="logo" :class="{ 'is-hidden': logoIsHidden }" :style="logoStyle"/>
-            <p ref="subtitle" class="TitleCard-subtitle" :style="subtitleStyle">I'm a full stack engineer with a streamlined and thoughtful approach to development.</p>
+            <p ref="subtitle" class="TitleCard-subtitle" :style="subtitleStyle">I'm a full stack engineer with streamlined and thoughtful approaches to development.</p>
 
         </div>
     </div>
@@ -38,6 +38,8 @@ export default {
         logoStyle() {
             return {
                 height: '200px',
+                maxHeight: 'calc(25vw - 20px)',
+                maxWidth: 'calc(100vw - 80px)',
                 width: '800px',
                 transform: `scale(${0.2 + 0.8 * LogoData.percent})`,
             }

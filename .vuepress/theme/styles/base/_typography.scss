@@ -1,21 +1,73 @@
 body {
     color: $color-darkest-gray;
-    font-family: 'Libre Caslon Text', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
     line-height: $line-height-base;
+
+    @media (max-width: 960px) {
+        font-size: $font-size-small;
+        font-weight: $font-weight-small;
+        line-height: $line-height-small;
+    }
+}
+
+p {
+    margin: 0 0 $line-height-base;
+
+    @media (max-width: 960px) {
+        margin: 0 0 $line-height-small;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: inherit;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $color-rose;
+    }
 }
 
 h1 {
+    border-bottom: 1px solid $color-dark-gray;
+    color: $color-dark-gray;
     font-size: $font-size-h1;
     font-weight: $font-weight-h1;
     line-height: $line-height-h1;
+    margin: 0 0 36px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    @media (max-width: 960px) {
+        font-size: $font-size-h3;
+        font-weight: $font-weight-h3;
+        line-height: $line-height-h3;
+    }
 }
 
 h2 {
     font-size: $font-size-h2;
     font-weight: $font-weight-h2;
     line-height: $line-height-h2;
+    margin: 0 0 36px;
+    
+    @media (max-width: 960px) {
+        font-size: $font-size-h4;
+        font-weight: $font-weight-h4;
+        line-height: $line-height-h4;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 h3 {
@@ -42,6 +94,7 @@ h6 {
     line-height: $line-height-h6;
 }
 
-.header-anchor {
-    display: none;
+.header-anchor,
+.icon.outbound {
+    display: none !important;
 }

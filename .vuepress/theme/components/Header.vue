@@ -1,8 +1,5 @@
 <template>
-    <header :class="{
-        'Header': true,
-        'is-hidden': isHidden,
-    }">
+    <header :class="{ 'Header': true, 'is-hidden': isHidden }" :style="style">
         <div class="Wrap">
 
             <Logo/>
@@ -27,11 +24,14 @@ export default {
     computed: {
 
         isHidden() {
-            return (
-                ( 0 !== LogoData.percent ) ||
-                (120 + UIData.scrollTop > UIData.windowHeight)
-            )
+            return ( 0 !== LogoData.percent )
         },
+
+        style() {
+            if ( 120 + UIData.scrollTop > UIData.windowHeight ) {
+                return 'opacity:0;'
+            }
+        }
 
     },
 

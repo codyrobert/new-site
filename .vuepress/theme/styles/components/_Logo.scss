@@ -5,7 +5,6 @@
     margin: 0 0 48px;
 	position: relative;
     transform-origin: left top;
-    transition: 0.4s opacity;
     width: 176px;
     
     &:last-child {
@@ -13,7 +12,7 @@
     }
 
     &.is-hidden {
-        opacity: 0;
+        visibility: hidden;
     }
 
 	svg {

@@ -2,14 +2,14 @@ const path = require('path');
 
 module.exports = {
 
-    title: 'Cody Robert',
+    title: 'Cody Robert Baker',
 
     head: [
         ['script', {}, 'document.documentElement.classList.add(\'js\');'],
-        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap' }],
+        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap' }],
     ],
 
-    base: '/new-portfolio/',
+    base: '/',
 
     dest: 'docs',
 

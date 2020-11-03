@@ -3,7 +3,6 @@
     display: flex;
     height: 120px;
     left: 0;
-    opacity: 1;
     padding: 40px 0;
     position: fixed;
     right: 0;
@@ -12,6 +11,6 @@
     z-index: 20;
 
     &.is-hidden {
-        opacity: 0;
+        visibility: hidden;
     }
 }

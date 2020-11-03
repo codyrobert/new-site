@@ -1,0 +1,16 @@
+.Button {
+    border-bottom: 2px solid $color-light-gray;
+    color: $color-mauve;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 16px;
+    margin-right: 24px;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+        border-color: $color-rose;
+        color: $color-rose;
+    }
+}
